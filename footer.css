@@ -1,0 +1,47 @@
+.footerBar {
+  grid-area: footerBar;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+      grid-template-areas: "companyLogo link";
+  background-color: #c7c2c2;
+  border-radius: 25px;
+}
+
+.footerBar .companyLogo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: companyLogo;
+}
+
+.footerBar .companyLogo img {
+  padding: 0 0 0 10px;
+  width: 2.5vw;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.footerBar .link {
+  font-size: 30px;
+  font-family: "Bebas Neue", cursive;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: link;
+  text-align: right;
+}
+
+.footerBar .link a:link {
+  text-decoration: none;
+}
+
+.footerBar .link a:visited {
+  color: black;
+}
+/*# sourceMappingURL=footer.css.map */
