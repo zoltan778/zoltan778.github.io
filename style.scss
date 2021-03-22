@@ -1,72 +1,141 @@
 * {
-  margin: 0;
   padding: 0;
-
+  margin: 0;
   box-sizing: border-box;
 }
 
-h1 {
-  @media screen and (max-width: 989px) {
-    font-size: 60px;
-    margin-bottom: 60px;
-  }
-  @media screen and (min-width: 990px) {
-    font-size: 90px;
-    margin-bottom: 40px;
-  }
-
-  line-height: 1em;
+body {
+  min-height: 100vh;
 }
 
-p.lorem {
-  @media screen and (max-width: 989px) {
-    margin-bottom: 120px;
+.main {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 751px) {
+    justify-content: center;
+    align-items: center;
   }
-  @media screen and (min-width: 990px) {
-    margin-bottom: 40px;
-  }
-
-  line-height: 2em;
-  hyphens: auto;
-}
-
-button.btn.btn-dark {
-  padding: 20px 70px;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  border-radius: 40px;
-  margin-bottom: 40px;
-}
-
-.navbar {
-  background-color: rgba(0, 0, 0, 0) !important;
-}
-
-.navbar-toggler {
-  background-color: black;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-}
-
-.container {
-  @media screen and (max-width: 989px) {
-    margin-top: 60px;
-  }
-  @media screen and (min-width: 990px) {
-    margin-top: -30px;
+  @media screen and (max-width: 750px) {
+    justify-content: center;
+    align-items: flex-start;
   }
 }
 
-.nav-link {
-  color: black !important;
-  font-size: 30px;
-}
+.flex {
+  padding-bottom: 30px;
+  padding-top: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.dropdown-item {
-  font-size: 20px;
-}
+  gap: 5%;
 
-input[placeholder="Search"] {
-  font-size: 30px;
+  border: 2px solid red;
+
+  background-color: lightgreen;
+
+  @media screen and (min-width: 751px) {
+    flex-direction: row;
+
+    width: 100vw;
+    max-width: 1200px;
+    height: 100vh;
+    max-height: 500px;
+  }
+  @media screen and (max-width: 750px) {
+    flex-direction: column;
+    padding-top: 100px;
+
+    width: 100vw;
+    height: fit-content;
+  }
+
+  div {
+    position: relative;
+    border: 2px solid green;
+
+    @media screen and (min-width: 751px) {
+      width: 30%;
+      max-width: 250px;
+      height: 100%;
+      max-height: 350px;
+    }
+    @media screen and (max-width: 750px) {
+      margin-top: 50px;
+      width: 80%;
+      max-width: 100%;
+      height: fit-content;
+      min-height: 250px;
+    }
+
+    .link {
+      position: absolute;
+      top: 100%;
+      left: 0;
+
+      color: orange;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+  }
+
+  .left,
+  .right {
+    background-color: black;
+  }
+
+  .left {
+    padding: 20px;
+
+    h2 {
+      font-size: 25px;
+      color: orange;
+      line-height: 1.5em;
+    }
+    p {
+      color: white;
+    }
+  }
+
+  .middle {
+    background-color: white;
+    padding: 20px;
+
+    h2 {
+      font-size: 25px;
+      color: orange;
+      line-height: 1.5em;
+    }
+    p {
+      color: black;
+    }
+  }
+
+  h1 {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 30px);
+
+    text-transform: uppercase;
+    font-weight: 100;
+    color: white;
+  }
+
+  .btn.btn-dark {
+    position: absolute;
+    left: 100%;
+    top: 0;
+
+    transform: translate(calc(-100% - 15px), 15px);
+
+    border-radius: 50%;
+    padding: 12px 15px;
+  }
 }
